@@ -1,0 +1,77 @@
+@import "tailwindcss";
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500&family=Space+Grotesk:wght@400;500;600&display=swap'); */
+
+@layer base {
+  body {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: "Space Grotesk", sans-serif;
+  }
+
+  code,
+  .font-mono {
+    font-family: "Roboto Mono", monospace;
+  }
+}
+
+@layer components {
+  .mechanical-card {
+    @apply bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300;
+  }
+
+  .status-indicator {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+  }
+
+  .status-healthy {
+    @apply bg-green-100 text-green-800;
+  }
+
+  .status-warning {
+    @apply bg-amber-100 text-amber-800;
+  }
+
+  .status-critical {
+    @apply bg-red-100 text-red-800;
+  }
+
+  .gauge-container {
+    @apply relative overflow-hidden rounded-lg;
+    background: linear-gradient(145deg, #2d3748, #4a5568);
+  }
+
+  .industrial-input {
+    @apply border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none;
+    background: linear-gradient(to bottom, #f8fafc, #f1f5f9);
+  }
+
+  .mechanical-button {
+    @apply px-4 py-2 rounded-lg font-medium transition-all duration-300;
+    background: linear-gradient(145deg, #4f46e5, #7c3aed);
+    color: white;
+  }
+
+  .mechanical-button:hover {
+    @apply shadow-lg;
+    transform: translateY(-1px);
+  }
+
+  .mechanical-button-secondary {
+    @apply px-4 py-2 rounded-lg font-medium border border-gray-300 transition-all duration-300;
+    background: linear-gradient(to bottom, #ffffff, #f8fafc);
+  }
+
+  .mechanical-button-secondary:hover {
+    @apply shadow-md border-gray-400;
+    transform: translateY(-1px);
+  }
+}
